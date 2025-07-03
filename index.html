@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chloé Santerre - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('https://64.media.tumblr.com/63e1cc6b01473569225516f6d0819c86/f97d3c60ef5a1d28-43/s1280x1920/cb18505f1cff092155000aca8059673f38cbdd22.gifv') no-repeat center center fixed;
+      background-size: cover;
+      color: rgba(28, 28, 28, 1);
+      line-height: 1.6;
+      padding: 2rem;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: rgba(255 255 255 / 0.15);
+      backdrop-filter: blur(20px);
+      border-radius: 15px;
+      padding: 2rem 3rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: rgba(28, 28, 28, 0.95);
+      text-shadow: 0 3px 7px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 0.3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      user-select: none;
+    }
+
+    .job-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #ff7f00;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      user-select: none;
+      text-shadow: 0 2px 6px rgba(255 127 0 / 0.8);
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(255 255 255 / 0.25);
+      backdrop-filter: blur(18px);
+      padding: 6px;
+      box-shadow: 0 0 25px rgba(255 255 255 / 0.4);
+      flex-shrink: 0;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      margin: 0 auto 1rem;
+    }
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+    .profile-pic:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 30px rgba(255 255 255 / 0.6);
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: rgba(28,28,28,0.85);
+    }
+
+    p {
+      margin: 0.5rem 0;
+      color: rgba(28,28,28,0.85);
+      text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-bottom: 1.5rem;
+      user-select: none;
+      flex-wrap: wrap;
+    }
+
+    .contact-box {
+      background: transparent;
+      backdrop-filter: none;
+      border-radius: 14px;
+      padding: 1rem 1.8rem;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      color: rgba(28,28,28,0.9);
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      user-select: text;
+      border: 2px solid transparent;
+      min-width: 230px;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .contact-box:hover,
+    .contact-box:focus-visible {
+      transform: translateY(-5px);
+      background-color: rgba(255 255 255 / 0.12);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.15);
+      border-color: #ff7f00;
+      outline: none;
+      color: #ff7f00;
+      text-decoration: none;
+    }
+
+    .contact-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .section {
+      background: rgba(255 255 255 / 0.12);
+      backdrop-filter: blur(16px);
+      border-radius: 14px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .job {
+      margin-bottom: 1rem;
+      background: transparent;
+      backdrop-filter: none;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    .job:hover {
+      transform: translateY(-4px);
+      background-color: rgba(255 255 255 / 0.12);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem 2.5rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .skill-item {
+      background: transparent;
+      backdrop-filter: none;
+      border-radius: 14px;
+      box-shadow: none;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      min-width: 220px;
+      max-width: 320px;
+      color: #1c1c1c;
+      font-weight: 600;
+      font-size: 1.05rem;
+      user-select: none;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    .skill-item:hover {
+      transform: translateY(-6px);
+      background-color: rgba(255 255 255 / 0.12);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+
+    .skill-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      fill: #ff7f00; /* warm orange */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-pic" aria-label="Profile picture">
+      <img src="img/profile_pic.png" alt="Profile picture" />
+    </div>
+
+    <h1>
+      Chloé Santerre
+      <span class="job-title">Cloud &amp; Backend Engineer</span>
+    </h1>
+
+    <div class="contact-container" role="region" aria-label="Contacts">
+      <a href="mailto:chloe.santerre@proton.me" class="contact-box" aria-label="Envoyer un email à Chloé Santerre" tabindex="0">
+        <span class="contact-icon" aria-hidden="true">✉️</span>
+        chloe.santerre@proton.me
+      </a>
+
+      <a href="https://www.linkedin.com/in/%F0%9F%8E%AE-chlo%C3%A9-santerre-5695131b5/" class="contact-box" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Chloé Santerre" tabindex="0">
+        <span class="contact-icon" aria-hidden="true">🔗</span>
+        LinkedIn
+      </a>
+    </div>
+
+    <div class="section">
+      <h2>About</h2>
+      <p style="font-size:1.15rem; color:#1c1c1c; font-style:italic; margin-bottom:1.1rem;">
+      Hello there, welcome to my little corner of the web.
+      </p>
+      <p>
+      <strong>I'm Chloé</strong>, a Canadian developer based in France, passionate about IT with <strong>9 years of experience</strong>.
+      </p>
+      <p>
+      I specialize in cloud environments and have built products for cloud platforms.
+      </p>
+      <p> Huge nerd here. I love Linux-based systems (btw, I use Arch & nvim), and I basically live in my terminal.</p>
+      <p>
+      <span style="background:rgba(255,127,0,0.08); padding:0.2em 0.5em; border-radius:6px;">
+        One of my proudest achievements is leading the backend development of a cloud platform at Ubisoft.
+      </span>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Experiences</h2>
+
+      <div class="job" tabindex="0">
+        <h3>Ubisoft — Cloud Developer / Tech Lead (April 2022 - Present)</h3>
+        <p>
+          When I joined Ubisoft, I was the founding engineer of a new automation team for data center operations. I worked closely with ops teams to document workflows and design automation tools from scratch, streamlining server deployment worldwide.
+        </p>
+        <p>
+          Later, I acted as the lead for the Storage team’s Kubernetes migration, coordinating engineers to ensure a smooth and timely transition.
+        </p>
+        <p>
+          Today, I’m part of the Cloud team, developing backend APIs for Ubisoft’s internal cloud platform. I build and maintain microservices in Go and Python, create tools to simplify product onboarding, and lead important migrations like moving to ArgoCD and Vault.
+        </p>
+      </div>
+
+      <div class="job" tabindex="0">
+        <h3>Scaleway — Hardware Automation Engineer (2019 - 2022)</h3>
+        <p>Automated multi-datacenter infrastructure (France, NL, Poland), developed tools in Python & Bash, coordinated tech in the field + RMA. Bridged product, infra, and support teams.</p>
+      </div>
+
+      <div class="job" tabindex="0">
+        <h3>DCS Easyware — IT Manager (August 2017 - April 2018)</h3>
+        <p>Managed IT team, budget, infrastructure, strategic choices, and led IT projects in an industrial environment.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill-item" tabindex="0">
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L1.5 21h21L12 2zM12 6.3l7.03 12.2H4.97L12 6.3zM11 14h2v2h-2v-2z"/>
+          </svg>
+          Languages: Go, Python, Bash
+        </div>
+        <div class="skill-item" tabindex="0">
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="none" />
+            <path d="M12 6v6l4 2" stroke="#ff7f00" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+          Cloud & Infra: Kubernetes, Docker, GitLab CI/CD, ArgoCD, Vault.
+        </div>
+        <div class="skill-item" tabindex="0">
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="5" width="18" height="14" rx="2" ry="2" stroke="#ff7f00" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          Tools: Netbox, Kong, Prometheus, GCP, AWS, Azure, Grafana, Kibana, Terraform, Ansible
+        </div>
+        <div class="skill-item" tabindex="0">
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4a8 8 0 018 8 8 8 0 01-8 8 8 8 0 010-16zm0 6a2 2 0 100 4 2 2 0 000-4z" />
+          </svg>
+          Soft Skills: Tech Lead, mentoring, coordination, product vision
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <p>CEGEP Trois-Rivières</p>
+      <p> Electronic engineering - Computers & Network</p>
+    </div>
+  </div>
+  <!--
+    Hey there, curious developer! 
+    Thanks for peeking into the source code. 
+    You’re awesome — keep building amazing things!
+  -->
+</body>
+</html>

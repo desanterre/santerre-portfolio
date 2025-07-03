@@ -1,0 +1,29 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Icon files
+.Icon?
+
+# Spotlight files
+.Spotlight-V100
+.Trashes
+
+# Temporary files
+*.swp
+*~.nib
+*.nib~
+
+# Files created by macOS Finder
+.DS_Store?
+
+# Files created by macOS metadata
+._*
+
+# Environment variables files
+.env
+*.env
